@@ -1,0 +1,253 @@
+name: gambas3
+base: core18
+version: '3.14.2'
+summary: Gambas
+description: |
+  Gambas development environment
+
+grade: stable
+confinement: classic
+
+architectures:
+  - build-on: amd64
+
+apps:
+  gambas3:
+    command: bin/gambas3
+  gba3:
+    command: bin/gba3
+  gbc3:
+    command: bin/gbc3
+  gbh3:
+    command: bin/gbh3
+  gbi3:
+    command: bin/gbi3
+  gbr3:
+    command: bin/gbr3
+  gbs3:
+    command: bin/gbs3
+  gbw3:
+    command: bin/gbw3
+  gbx3:
+    command: bin/gbx3
+
+parts:
+  gambas:
+    plugin: autotools
+    source: https://gitlab.com/gambas/gambas.git
+    source-tag: $SNAPCRAFT_PROJECT_VERSION
+    build-packages:
+      - build-essential
+      - g++
+      - automake
+      - autoconf
+      - libtool
+      - libbz2-dev
+      - unixodbc-dev
+      - libpq-dev
+      - libsqlite0-dev
+      - libsqlite3-dev
+      - libmysqlclient-dev
+      - postgresql-server-dev-10
+      - libglib2.0-dev
+      - libgtk2.0-dev
+      - libcurl4-gnutls-dev
+      - libgtkglext1-dev
+      - libpcre3-dev
+      - libsdl-sound1.2-dev
+      - libsdl-mixer1.2-dev
+      - libsdl-image1.2-dev
+      - libxml2-dev
+      - libxslt1-dev
+      - librsvg2-dev
+      - libpoppler-dev
+      - libpoppler-glib-dev
+      - libpoppler-private-dev
+      - libasound2-dev
+      - libdirectfb-dev
+      - libxtst-dev
+      - libffi-dev
+      - libqt4-dev
+      - libqtwebkit-dev
+      - libqt4-opengl-dev
+      - libglew-dev
+      - libimlib2-dev
+      - libv4l-dev
+      - libsdl-ttf2.0-dev
+      - libgnome-keyring-dev
+      - libgdk-pixbuf2.0-dev
+      - linux-libc-dev
+      - libgstreamer1.0-dev
+      - libgstreamer-plugins-base1.0-dev
+      - libcairo2-dev
+      - libgsl-dev
+      - libncurses5-dev
+      - libgmime-2.6-dev
+      - libalure-dev
+      - libgmp-dev
+      - libgtk-3-dev
+      - libsdl2-dev
+      - libsdl2-mixer-dev
+      - libsdl2-ttf-dev
+      - libsdl2-image-dev
+      - sane-utils
+      - libdumb1-dev
+      - libqt5opengl5-dev
+      - libqt5svg5-dev
+      - libqt5webkit5-dev
+      - libqt5x11extras5-dev
+      - qtbase5-dev
+      - libssl-dev
+      - libcanberra-gtk-module
+      - git
+    stage-packages:
+      - libalure1
+      - libasn1-8-heimdal
+      - libasound2
+      - libassuan0
+      - libasyncns0
+      - libatk-bridge2.0-0
+      - libatk1.0-0
+      - libatspi2.0-0
+      - libaudio2
+      - libbrotli1
+      - libcaca0
+      - libcairo-gobject2
+      - libcairo2
+      - libcroco3
+      - libcurl3-gnutls
+      - libdatrie1
+      - libdouble-conversion1
+      - libepoxy0
+      - libflac8
+      - libfluidsynth1
+      - libfontconfig1
+      - libfreetype6
+      - libgdk-pixbuf2.0-0
+      - libgl1
+      - libglew2.0
+      - libglu1-mesa
+      - libglvnd0
+      - libglx0
+      - libgmime-2.6-0
+      - libgnome-keyring0
+      - libgpgme11
+      - libgraphite2-3
+      - libgsl23
+      - libgslcblas0
+      - libgssapi3-heimdal
+      - libgstreamer-plugins-base1.0-0
+      - libgstreamer1.0-0
+      - libgtk-3-0
+      - libgtk2.0-0
+      - libgtkglext1
+      - libharfbuzz0b
+      - libhcrypto4-heimdal
+      - libheimbase1-heimdal
+      - libheimntlm0-heimdal
+      - libhx509-5-heimdal
+      - libhyphen0
+      - libice6
+      - libicu60
+      - libimlib2
+      - libjack-jackd2-0
+      - libjbig0
+      - libjpeg-turbo8
+      - libkrb5-26-heimdal
+      - liblcms2-2
+      - libldap-2.4-2
+      - libltdl7
+      - libmad0
+      - libmikmod3
+      - libmodplug1
+      - libmysqlclient20
+      - libnghttp2-14
+      - libnspr4
+      - libnss3
+      - libodbc1
+      - libogg0
+      - libopenal1
+      - liborc-0.4-0
+      - libpango-1.0-0
+      - libpangocairo-1.0-0
+      - libpangoft2-1.0-0
+      - libpangox-1.0-0
+      - libpixman-1-0
+      - libpng16-16
+      - libpoppler73
+      - libpq5
+      - libpsl5
+      - libpulse0
+      - libqt4-network
+      - libqt4-opengl
+      - libqt4-qt3support
+      - libqt4-sql
+      - libqt4-svg
+      - libqt4-xml
+      - libqt5core5a
+      - libqt5gui5
+      - libqt5network5
+      - libqt5positioning5
+      - libqt5printsupport5
+      - libqt5qml5
+      - libqt5quick5
+      - libqt5sensors5
+      - libqt5svg5
+      - libqt5webchannel5
+      - libqt5webkit5
+      - libqt5widgets5
+      - libqt5x11extras5
+      - libqtcore4
+      - libqtgui4
+      - libqtwebkit4
+      - libroken18-heimdal
+      - librsvg2-2
+      - librtmp1
+      - libsasl2-2
+      - libsdl-mixer1.2
+      - libsdl-ttf2.0-0
+      - libsdl1.2debian
+      - libsdl2-2.0-0
+      - libsdl2-image-2.0-0
+      - libsdl2-mixer-2.0-0
+      - libsdl2-ttf-2.0-0
+      - libslang2
+      - libsm6
+      - libsndfile1
+      - libsndio6.1
+      - libsqlite0
+      - libthai0
+      - libtiff5
+      - libv4lconvert0
+      - libvorbis0a
+      - libvorbisenc2
+      - libvorbisfile3
+      - libwayland-client0
+      - libwayland-cursor0
+      - libwayland-egl1
+      - libwebp6
+      - libwind0-heimdal
+      - libwoff1
+      - libx11-6
+      - libxau6
+      - libxcb-render0
+      - libxcb-shm0
+      - libxcb1
+      - libxcomposite1
+      - libxcursor1
+      - libxdamage1
+      - libxdmcp6
+      - libxext6
+      - libxfixes3
+      - libxi6
+      - libxinerama1
+      - libxkbcommon0
+      - libxml2
+      - libxmu6
+      - libxrandr2
+      - libxrender1
+      - libxslt1.1
+      - libxss1
+      - libxt6
+      - libxtst6
+      - libxxf86vm1
